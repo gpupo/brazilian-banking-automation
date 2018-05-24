@@ -1,0 +1,34 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ * This file is part of gpupo/brazilian-banking-automation
+ * Created by Gilmar Pupo <contact@gpupo.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ * For more information, see <https://opensource.gpupo.com/>.
+ */
+
+namespace Gpupo\BrazilianBankingAutomation\Console\Command;
+
+require 'vendor/autoload.php';
+
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+use Gpupo\Common\Entity\CollectionInterface;
+use Gpupo\CommonSdk\Entity\CollectionContainerInterface;
+use Symfony\Component\Yaml\Yaml;
+use Gpupo\CommonSdk\Entity\Schema\Tools;
+use Gpupo\BrazilianBankingAutomation\Cnab400\Collection;
+$input = new ArgvInput();
+$output = new ConsoleOutput();
+
+$collection = new Collection([
+    [
+        'tipoDeRegistro'    => 'foo',
+        'codigoDeRetorno'   => 'bar',
+    ]
+]);
+
+
+dump($collection);
