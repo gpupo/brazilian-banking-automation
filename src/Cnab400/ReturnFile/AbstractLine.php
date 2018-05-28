@@ -15,22 +15,26 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\BrazilianBankingAutomation\Cnab400;
+namespace Gpupo\BrazilianBankingAutomation\Cnab400\ReturnFile;
 
+use Gpupo\BrazilianBankingAutomation\Tools\Tools;
 use Gpupo\Common\Entity\CollectionInterface;
 use Gpupo\CommonSdk\Entity\EntityAbstract;
 use Gpupo\CommonSdk\Entity\EntityInterface;
 
-class Item extends EntityAbstract implements EntityInterface, CollectionInterface
+abstract class AbstractLine extends EntityAbstract implements EntityInterface, CollectionInterface
 {
-    /**
-     * @codeCoverageIgnore
-     */
-    public function getSchema()
+    public function formatted($field)
     {
-        return [
-            'tipoDeRegistro' => 'string',
-            'codigoDeRetorno' => 'string',
-        ];
+        if (!$this->get('tools')) {
+            $this->set('tools', new Tools());
+        }
+
+        $schema = $this->schemaFileName;
+
+        $value = $this->get($field);
+        $formatted = $this->get('tools')->getFormat($schema, $field, $value);
+
+        return $formatted;
     }
 }

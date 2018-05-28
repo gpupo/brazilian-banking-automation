@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\BrazilianBankingAutomation\Cnab400;
+namespace Gpupo\BrazilianBankingAutomation\Cnab400\ReturnFile;
 
 use Gpupo\Common\Entity\CollectionInterface;
 use Gpupo\CommonSdk\Entity\CollectionAbstract;
