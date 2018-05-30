@@ -1,0 +1,63 @@
+tipo_de_registro:
+  original: 9
+  formatted: '9'
+
+codigo_de_retorno:
+  original: 2
+  formatted: '2'
+
+codigo_de_servico:
+  original: 1
+  formatted: '01'
+
+codigo_do_banco:
+  original: '341'
+  formatted: '341'
+
+qtdede_titulos:
+  original: 0
+  formatted: '00000000'
+
+valor_total:
+  original: 0
+  formatted: '00000000000000'
+
+aviso_bancario:
+  original: ''
+  formatted: "        "
+
+qtdede_titulos_dup:
+  original: 0
+  formatted: '00000000'
+
+valor_total_dup:
+  original: 0
+  formatted: '00000000000000'
+
+aviso_bancario_dup:
+  original: ''
+  formatted: "        "
+
+qtdede_titulos_dup2:
+  original: 0
+  formatted: '00000000'
+
+valor_total_dup2:
+  original: 0
+  formatted: '00000000000000'
+
+aviso_bancario_dup2:
+  original: ''
+  formatted: "        "
+
+controle_do_arquivo:
+  original: 112
+  formatted: '00112'
+
+qtde_de_detalhes:
+  original: 4
+  formatted: '00000004'
+  
+vlr_total_informado:
+  original: 1895.76
+  formatted: '00000000189576'

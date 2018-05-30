@@ -19,6 +19,7 @@ namespace Gpupo\Tests\BrazilianBankingAutomation\Cnab400;
 
 use Gpupo\BrazilianBankingAutomation\Cnab400\ReturnFile\Header;
 use Gpupo\Tests\BrazilianBankingAutomation\AbstractTestCase;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * @coversNothing
@@ -27,39 +28,30 @@ class HeaderTest extends AbstractTestCase
 {
     public function testFormat()
     {
-        $provider = [
-          'tipo_de_registro' => ['original' => 0, 'formatted' => '0'],
-          'codigo_de_retorno' => ['original' => '2', 'formatted' => '2'],
-          'literal_de_retorno' => ['original' => 'RETORNO', 'formatted' => 'RETORNO'],
-          'retorno_codigo_do_servico' => ['original' => '1', 'formatted' => '01'],
-          'literal_de_servico' => ['original' => 'COBRANCA', 'formatted' => 'COBRANCA       '],
-          'nome_da_empresa' => ['original' => 'F E COSTA MIRANDA', 'formatted' => 'F E COSTA MIRANDA             '],
-          'codigo_do_banco' => ['original' => '341', 'formatted' => '341'],
-          'nome_do_banco' => ['original' => 'BANCO ITAU S.A.', 'formatted' => 'BANCO ITAU S.A.'],
-          'data_de_geracao' => ['original' => '010413', 'formatted' => '010413'],
-          'cobranca' => ['original' => '4826', 'formatted' => '4826'],
-          'conta' => ['original' => '7427', 'formatted' => '07427'],
-          'dac' => ['original' => '2', 'formatted' => '2'],
-          'densidade' => ['original' => '01600', 'formatted' => '01600'],
-          'unidade_de_densid' => ['original' => 'BPI', 'formatted' => 'BPI'],
-          'n_seq_arquivo_ret' => ['original' => '266', 'formatted' => '00266'],
-          'data_de_credito' => ['original' => '020413', 'formatted' => '020413'],
-          //'zeros01' => ['original' => 0, 'formatted' => '00'],
-          //'brancos01' => ['original' => 0, 'formatted' => '        '],
-          //'brancos02' => ['original' => '', 'formatted' => '                                                                                                                                                                                                                                                                                   '],
-          //'numero_sequencial' => ['original' => 0, 'formatted' => '000001'],
-          //'brancos09' => ['original' => 0, 'formatted' => '       '],
-        ];
+        $provider = Yaml::parse(file_get_contents($this->getResourcesDirectory().'/providers/header.yaml'));
 
         $attrs = [];
         foreach ($provider as $k => $v) {
             $attrs[$k] = $v['original'];
         }
 
-        $item = new Header($attrs);
+        $header = new Header($attrs);
 
         foreach ($provider as $k => $v) {
-            $this->assertSame($v['formatted'], $item->formatted($k));
+            $this->assertSame($v['formatted'], $header->formatted($k), 'Test failed on '.$k);
         }
+
+        return $header;
+    }
+
+    /**
+     * @depends testFormat
+     */
+    public function testGenerateString(Header $header)
+    {
+        $content = file_get_contents($this->getResourcesDirectory().'/fixtures/RETORNO.RET');
+        $lines = explode("\r\n", $content);
+
+        $this->assertSame($header->generateString(1), $lines[0]);
     }
 }

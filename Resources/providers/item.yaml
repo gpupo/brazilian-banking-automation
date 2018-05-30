@@ -1,0 +1,139 @@
+codigo_do_banco:
+  original: '1'
+  formatted: '001'
+
+tipo_de_registro:
+  original: '1'
+  formatted: '1'
+
+codigo_de_inscricao:
+  original: '2'
+  formatted: '02'
+
+numero_de_inscricao:
+  original: '09361352000321'
+  formatted: '09361352000321'
+
+agencia:
+  original: '0177'
+  formatted: '0177'
+
+conta:
+  original: '65373'
+  formatted: '65373'
+
+dac:
+  original: '0'
+  formatted: '0'
+
+uso_da_empresa:
+  original: ''
+  formatted: "                         "
+
+nosso_numero:
+  original: '00231327'
+  formatted: '00231327'
+
+carteira:
+  original: '109'
+  formatted: '109'
+
+nosso_numero_dup:
+  original: '00231327'
+  formatted: '00231327'
+
+dac_nosso_numero:
+  original: '0'
+  formatted: '0'
+
+carteira_cod:
+  original: I
+  formatted: I
+
+codigo_de_ocorrencia:
+  original: '6'
+  formatted: '06'
+
+data_de_ocorrencia:
+  original: '200613'
+  formatted: '200613'
+
+numero_do_documento:
+  original: 1A
+  formatted: '1A        '
+
+nosso_numero_dup2:
+  original: '231327'
+  formatted: '00231327'
+
+data_vencimento:
+  original: 0
+  formatted: '000000'
+
+valor_do_titulo:
+  original: 389.75
+  formatted: '0000000038975'
+
+agencia_cobradora:
+  original: '3027'
+  formatted: '3027'
+
+agencia_cobradora_dac:
+  original: '2'
+  formatted: '2'
+
+especie:
+  original: 0
+  formatted: '00'
+
+valor_tarifa:
+  original: 3.33
+  formatted: '0000000000333'
+
+valor_iof:
+  original: 0.1
+  formatted: '0000000000010'
+
+valor_abatimento:
+  original: 0.19
+  formatted: '0000000000019'
+
+valor_desconto:
+  original: 176.45
+  formatted: '0000000017645'
+
+valor_principal:
+  original: 209.97
+  formatted: '0000000020997'
+
+valor_mora_multa:
+  original: 123123.12
+  formatted: '0000012312312'
+
+valor_outros_creditos:
+  original: 0.18
+  formatted: '0000000000018'
+
+boleto_dda:
+  original: ''
+  formatted: " "
+
+data_credito:
+  original: '210613'
+  formatted: '210613'
+
+instr_cancelada:
+  original: 0
+  formatted: '0000'
+
+nome_do_sacado:
+  original: ''
+  formatted: "                              "
+
+erros:
+  original: ''
+  formatted: "        "
+
+codigo_liquidacao:
+  original: 'B2'
+  formatted: 'B2'

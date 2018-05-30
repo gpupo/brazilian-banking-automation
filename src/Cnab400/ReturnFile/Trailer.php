@@ -31,19 +31,22 @@ class Trailer extends AbstractLine
           'codigo_de_retorno' => 'number',
           'codigo_de_servico' => 'string',
           'codigo_do_banco' => 'string',
-          'numero_sequencial' => 'string',
+          'brancos01' => 'string',
           'qtdede_titulos' => 'string',
           'valor_total' => 'number',
           'aviso_bancario' => 'string',
+          'brancos02' => 'string',
           'qtdede_titulos_dup' => 'number',
           'valor_total_dup' => 'number',
           'aviso_bancario_dup' => 'string',
+          'brancos03' => 'string',
           'qtdede_titulos_dup2' => 'number',
           'valor_total_dup2' => 'number',
           'aviso_bancario_dup2' => 'string',
           'controle_do_arquivo' => 'number',
           'qtde_de_detalhes' => 'number',
           'vlr_total_informado' => 'number',
+          'brancos04' => 'string',
         ];
     }
 }

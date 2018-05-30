@@ -1,0 +1,63 @@
+tipo_de_registro:
+  original: 0
+  formatted: '0'
+
+codigo_de_retorno:
+  original: '2'
+  formatted: '2'
+
+literal_de_retorno:
+  original: RETORNO
+  formatted: RETORNO
+
+retorno_codigo_do_servico:
+  original: '1'
+  formatted: '01'
+
+literal_de_servico:
+  original: COBRANCA
+  formatted: 'COBRANCA       '
+
+cobranca:
+  original: '0111'
+  formatted: '0111'
+
+conta:
+  original: '12345'
+  formatted: '12345'
+
+dac:
+  original: '0'
+  formatted: '0'
+
+nome_da_empresa:
+  original: Teste de Retorno
+  formatted: 'Teste de Retorno              '
+
+codigo_do_banco:
+  original: '341'
+  formatted: '341'
+
+nome_do_banco:
+  original: BANCO ITAU S.A.
+  formatted: BANCO ITAU S.A.
+
+data_de_geracao:
+  original: '220813'
+  formatted: '220813'
+
+densidade:
+  original: '01600'
+  formatted: '01600'
+
+unidade_de_densid:
+  original: BPI
+  formatted: BPI
+
+n_seq_arquivo_ret:
+  original: '112'
+  formatted: '00112'
+
+data_de_credito:
+  original: '210613'
+  formatted: '210613'

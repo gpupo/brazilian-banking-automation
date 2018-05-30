@@ -37,4 +37,16 @@ abstract class AbstractLine extends EntityAbstract implements EntityInterface, C
 
         return $formatted;
     }
+
+    public function generateString($incremental = 1)
+    {
+        $line = '';
+        foreach (array_keys($this->getSchema()) as $k) {
+            $line .= $this->formatted($k);
+        }
+
+        $line .= str_pad((string) $incremental, 6, '0', STR_PAD_LEFT);
+
+        return $line;
+    }
 }

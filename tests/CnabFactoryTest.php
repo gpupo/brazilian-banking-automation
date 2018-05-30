@@ -28,7 +28,7 @@ class CnabFactoryTest extends AbstractTestCase
     public function testIsACnbaFile()
     {
         $cnabFactory = new \Cnab\Factory();
-        $arquivo = $cnabFactory->createRetorno('Resources/fixtures/CN01043A.RET');
+        $arquivo = $cnabFactory->createRetorno('Resources/fixtures/RETORNO.RET');
         $this->assertInstanceof(Arquivo::class, $arquivo);
 
         return $arquivo;
