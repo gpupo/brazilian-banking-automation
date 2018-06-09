@@ -1,113 +1,63 @@
+# Página Brazilian Banking Automation
 
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/gpupo/brazilian-banking-automation/blob/master/LICENSE)
-[![Build Status](https://secure.travis-ci.org/gpupo/brazilian-banking-automation.png?branch=master)](http://travis-ci.org/gpupo/brazilian-banking-automation)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master)
+**A Página Brazilian Banking Automation** é estática gerada através do  ([Jekyll Repository](https://github.com/jekyll/jekyll))
+
+Está é sobre biblioteca para automação de aplicações inseridas no mercado Brasileiro (https://github.com/gpupo/brazilian-banking-automation)  de autoria do [Gilmar Pupo](https://github.com/gpupo).
 
 
-# brazilian-banking-automation
 
-[![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EK6F2WRKG7GNN&item_name=netshoes-sdk)
+## Processo de construção
 
-## Install
 
-    composer require gpupo/brazilian-banking-automation
 
-## Usage
-
-### Modo 1 - instantiating objects
-
-```php
-<?php
-
-    $headerAttributes = [
-        'tipo_de_registro' => '0',
-        'codigo_de_retorno' => '2',
-        //...all required fields
-    ];
-
-    $trailerAttributes = [
-        'tipo_de_registro' => '9',
-        'codigo_de_retorno' => '2',
-        //...all required fields
-    ];
-
-    $itemAttributes = [
-        'tipo_de_registro' => '001',
-        'codigo_de_inscricao' => '1',
-        //...all required fields
-    ];
-
-  $headerObject = new Header($headerAttributes);
-  $trailerObject = new Trailer($trailerAttributes);
-  $itemObject = new Item($itemAttributes);
-
-  $file = new File($headerObject, $trailerObject);
-  $file->addItem($itemObject);
-
-  $file->getContent(); // content of file
-  //...
+Passo 1) Fork do repositório e clone
 
 ```
-
-### Modo 2 - using factory
-
-```php
-<?php
-
-  $factory = new Cnab400\Factory();
-
-  $item = $factory->factoryReturnItem($itemAttributes);
-  $file = $factory->factoryfile($headerAttributes, $trailerAttributes);
-  $file->addItem(item);
-
-  $file->getContent(); // content of file
-
+git clone <url-repositorio-forked> nova-pasta && cd nova-pasta 
 ```
 
-## Console
+Passo 2) Criado um novo branch "gh-pages"
 
-Generate Doctrine Yaml files
+```
+$ git checkout -b gh-pages
+```
 
-     ./bin/brazilian-banking-automation
+Passo 3) Apagado os arquivos do branch.
 
- ## Requisitos para uso
+Passo 4) Install Bundler
 
- * PHP >= *7.1*
- * [Composer Dependency Manager](http://getcomposer.org)
+```
+gem install bundler
+# Installs the Bundler gem
+```
 
- Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
- Sua implantação deve ser feita por desenvolvedores experientes.
+Passo 5) Como não tinha o Gemfile, o criei e inserir o seguintes dados:
 
- **Isto não é um Plugin!**
+```
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+```
 
- As opções que funcionam no modo de comando apenas servem para depuração em modo de
- desenvolvimento.
+Passo 6) Roda o código Bundle install para instalar as dependências
 
- A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
+```
+$ bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies...
+```
 
- <!-- license -->
+Passo 7) Copiei os arquivos da página de modelo [netshoes-sdk](https://github.com/gpupo/netshoes-sdk/tree/gh-pages) e colei na pasta
 
- ## Direitos autorais e de licença
+Passo 8) Rodei o servidor para ir visualizando as alterações
 
- Este componente está sob a [licença MIT](https://github.com/gpupo/common-sdk/blob/master/LICENSE)
+```
+$ bundle exec jekyll serve
+```
 
- Para a informação dos direitos autorais e de licença você deve ler o arquivo
- de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é distribuído com este código-fonte.
+Passo 9) Inseri os textos do repositório do **README.md** , do master, no **index.md** . Para otimizar a estrutura da página, utilizei como referência o projeto [Jekyll-now](https://github.com/barryclark/jekyll-now).
 
- ### Resumo da licença
+Basicamente foquei em melhorar as metatags e deixar a estrutura mais modular com sass e injections.
 
- Exigido:
 
- - Aviso de licença e direitos autorais
-
- Permitido:
-
- - Uso comercial
- - Modificação
- - Distribuição
- - Sublicenciamento
-
- Proibido:
-
- - Responsabilidade Assegurada
