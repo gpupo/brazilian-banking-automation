@@ -1,12 +1,11 @@
 ---
-layout: default
----
+
+## layout: default
 
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/gpupo/brazilian-banking-automation/blob/master/LICENSE)
 [![Build Status](https://secure.travis-ci.org/gpupo/brazilian-banking-automation.png?branch=master)](http://travis-ci.org/gpupo/brazilian-banking-automation)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master)
-
 
 # brazilian-banking-automation
 
@@ -14,7 +13,9 @@ layout: default
 
 ## Install
 
-    composer require gpupo/brazilian-banking-automation
+```
+composer require gpupo/brazilian-banking-automation
+```
 
 ## Usage
 
@@ -50,7 +51,6 @@ layout: default
 
   $file->getContent(); // content of file
   //...
-
 ```
 
 ### Modo 2 - using factory
@@ -65,52 +65,59 @@ layout: default
   $file->addItem(item);
 
   $file->getContent(); // content of file
-
 ```
 
 ## Console
 
 Generate Doctrine Yaml files
 
-     ./bin/brazilian-banking-automation
+```
+ ./bin/brazilian-banking-automation
+```
 
- ## Requisitos para uso
+## Requisitos para uso
 
- * PHP >= *7.1*
- * [Composer Dependency Manager](http://getcomposer.org)
+- PHP >= *7.1*
 
- Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
- Sua implantação deve ser feita por desenvolvedores experientes.
+- [Composer Dependency Manager](http://getcomposer.org)
 
- **Isto não é um Plugin!**
+  Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
+Sua implantação deve ser feita por desenvolvedores experientes.
 
- As opções que funcionam no modo de comando apenas servem para depuração em modo de
- desenvolvimento.
+  **Isto não é um Plugin!**
 
- A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
+  As opções que funcionam no modo de comando apenas servem para depuração em modo de
+desenvolvimento.
 
- <!-- license -->
+  A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
 
- ## Direitos autorais e de licença
+  
+<!-- license -->
 
- Este componente está sob a [licença MIT](https://github.com/gpupo/common-sdk/blob/master/LICENSE)
 
- Para a informação dos direitos autorais e de licença você deve ler o arquivo
- de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é distribuído com este código-fonte.
+  ## Direitos autorais e de licença
 
- ### Resumo da licença
+  Este componente está sob a [licença MIT](https://github.com/gpupo/common-sdk/blob/master/LICENSE)
 
- Exigido:
+  Para a informação dos direitos autorais e de licença você deve ler o arquivo
+de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é distribuído com este código-fonte.
 
- - Aviso de licença e direitos autorais
+  ### Resumo da licença
 
- Permitido:
+  Exigido:
 
- - Uso comercial
- - Modificação
- - Distribuição
- - Sublicenciamento
+- Aviso de licença e direitos autorais
 
- Proibido:
+  Permitido:
 
- - Responsabilidade Assegurada
+- Uso comercial
+
+- Modificação
+
+- Distribuição
+
+- Sublicenciamento
+
+  Proibido:
+
+- Responsabilidade Assegurada
