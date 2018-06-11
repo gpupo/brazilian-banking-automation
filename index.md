@@ -1,6 +1,6 @@
 ---
-
-## layout: default
+layout: default
+---
 
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/gpupo/brazilian-banking-automation/blob/master/LICENSE)
 [![Build Status](https://secure.travis-ci.org/gpupo/brazilian-banking-automation.png?branch=master)](http://travis-ci.org/gpupo/brazilian-banking-automation)
@@ -81,34 +81,33 @@ Generate Doctrine Yaml files
 
 - [Composer Dependency Manager](http://getcomposer.org)
 
-  Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
+Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
 Sua implantação deve ser feita por desenvolvedores experientes.
 
   **Isto não é um Plugin!**
 
-  As opções que funcionam no modo de comando apenas servem para depuração em modo de
+As opções que funcionam no modo de comando apenas servem para depuração em modo de
 desenvolvimento.
 
-  A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
+A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
 
-  
 <!-- license -->
 
 
-  ## Direitos autorais e de licença
+## Direitos autorais e de licença
 
   Este componente está sob a [licença MIT](https://github.com/gpupo/common-sdk/blob/master/LICENSE)
 
   Para a informação dos direitos autorais e de licença você deve ler o arquivo
 de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é distribuído com este código-fonte.
 
-  ### Resumo da licença
+### Resumo da licença
 
-  Exigido:
+Exigido:
 
 - Aviso de licença e direitos autorais
 
-  Permitido:
+Permitido:
 
 - Uso comercial
 
@@ -118,6 +117,6 @@ de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é di
 
 - Sublicenciamento
 
-  Proibido:
+Proibido:
 
 - Responsabilidade Assegurada
