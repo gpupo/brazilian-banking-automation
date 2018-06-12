@@ -91,18 +91,18 @@ desenvolvimento.
 
   A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
 
-  
+
 <!-- license -->
 
 
-  ## Direitos autorais e de licença
+## Direitos autorais e de licença
 
   Este componente está sob a [licença MIT](https://github.com/gpupo/common-sdk/blob/master/LICENSE)
 
   Para a informação dos direitos autorais e de licença você deve ler o arquivo
 de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é distribuído com este código-fonte.
 
-  ### Resumo da licença
+### Resumo da licença
 
   Exigido:
 
