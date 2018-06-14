@@ -1,3 +1,4 @@
+
 ## Install
 
 ```shell
@@ -68,7 +69,9 @@ Generate Doctrine Yaml files
 
 - [Composer Dependency Manager](http://getcomposer.org)
 
+
   Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
+
 Sua implantação deve ser feita por desenvolvedores experientes.
 
   **Isto não é um Plugin!**
