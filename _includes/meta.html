@@ -16,3 +16,21 @@
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="twitter:title" content="{{ page.title }}" />
     {% endif %}
+
+    <script type="application/ld+json">
+        { "@context": "http://schema.org", 
+         "@type": "Article",
+         "headline": "{{ site.name }}",
+         "alternativeHeadline": "{{ site.github.project_title }}",
+         "image": "{{ site.avatar }}",
+         "author": "{{ site.author }}", 
+         "genre": "open source", 
+         "keywords": "{{ site.keywords }}", 
+         "url": "{{ site.github.repository_url }}",
+         "description": "{{ site.description }}",
+         "hasPart": {
+            "isAccessibleForFree": "True",
+            "cssSelector" : ".main"
+            }
+         }
+        </script>

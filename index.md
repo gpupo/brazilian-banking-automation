@@ -1,19 +1,7 @@
----
-layout: default
----
-
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/gpupo/brazilian-banking-automation/blob/master/LICENSE)
-[![Build Status](https://secure.travis-ci.org/gpupo/brazilian-banking-automation.png?branch=master)](http://travis-ci.org/gpupo/brazilian-banking-automation)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master)
-
-# brazilian-banking-automation
-
-[![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EK6F2WRKG7GNN&item_name=netshoes-sdk)
 
 ## Install
 
-```
+```shell
 composer require gpupo/brazilian-banking-automation
 ```
 
@@ -81,15 +69,18 @@ Generate Doctrine Yaml files
 
 - [Composer Dependency Manager](http://getcomposer.org)
 
-Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
+
+  Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
+
 Sua implantação deve ser feita por desenvolvedores experientes.
 
   **Isto não é um Plugin!**
 
-As opções que funcionam no modo de comando apenas servem para depuração em modo de
+  As opções que funcionam no modo de comando apenas servem para depuração em modo de
 desenvolvimento.
 
-A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
+  A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
+
 
 <!-- license -->
 
@@ -103,11 +94,11 @@ de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é di
 
 ### Resumo da licença
 
-Exigido:
+  Exigido:
 
 - Aviso de licença e direitos autorais
 
-Permitido:
+  Permitido:
 
 - Uso comercial
 
@@ -117,6 +108,6 @@ Permitido:
 
 - Sublicenciamento
 
-Proibido:
+  Proibido:
 
 - Responsabilidade Assegurada

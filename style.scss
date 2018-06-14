@@ -5,25 +5,258 @@
 // IMPORTS
 //
 
-// @import "reset";
-// @import "variables";
-@import url("https://opensource.gpupo.com/stylesheets/styles.css");
-@import url("https://opensource.gpupo.com/stylesheets/github-dark.css");
-@import url("https://opensource.gpupo.com/stylesheets/pygments.css");
+@import "reset";
+@import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
 /* BASE RULES */
 /**************/
 
+html {
+  font-size: 100%;
+}
+
+body {
+	background: $white;
+  font: 18px/1.4 $openSans;
+  color: $darkGray;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $openSans;
+  color: $darkerGray;
+  font-weight: bold;
+
+  line-height: 1;
+  margin: 1em 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $gray;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+	cursor: pointer;
+  &:hover, &:active {
+    color: $blue;
+  }
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul, ul ol, ul ul, ol ol {
+  margin: 0;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+
 
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
 
+.o-wrapper {
+  width: 100%;
+  margin: 0;
+}
 
+.sidebar {
+  width: 30%;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  background-color: $lightGray;
+  text-align: right;
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 0px;
+
+  header {
+    .o-wrapper {
+      margin: 10px 0px 15px;
+    }
+  }
+}
+
+main {
+  width: 70%;
+  float: right;
+  padding-bottom: 50px;
+}
+
+
+footer {
+  margin-top: 30px;
+  width: 100%;
+  // float: left;
+  // position: fixed;
+  // bottom: 50px;
+  // -webkit-font-smoothing: subpixel-antialiased;
+  // text-align: right;
+  // background-color: $lightGray;
+}
+
+
+
+// COMPONENTS
+.c-avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.c-btn {
+  &--donate {
+    background-color: #F8E71C;
+    color: #000;
+    &:hover,
+    &:focus {
+      color: #000;
+      background-color: rgb(255, 243, 113);;
+    }
+  }
+  &--download{
+    background-color: #3376D9;
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: rgb(15, 90, 201);
+    }
+  }
+}
+.btn-toggle-menu  {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  position: fixed;
+  left: 5px;
+  &.actived {
+    background-color: #555;
+    color: #fff;
+  }
+
+}
+.c-btn-groups {
+  list-style-type: none;
+  li {
+    float: right;
+    padding: 5px;
+  }
+}
+
+.c-nav-page {
+  list-style-type: none;
+  counter-reset: marker;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  li {
+    position: relative;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    &::after {
+      counter-increment: marker;
+      content: counter(marker);
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      margin-left: 15px;
+      background-color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-size: 14px;
+    }
+    &.active,
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      &:after{
+        background-color:#555;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.c-site-info {
+  h1 {
+      margin: 0;
+      padding: 15px 0;
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+  }
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+// mediaqueries
+@import "mq";

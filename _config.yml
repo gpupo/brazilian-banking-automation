@@ -6,13 +6,18 @@
 name: Brazilian Banking Automation
 
 # Short bio or description (displayed in the header)
-description: Biblioteca para automação de aplicações inseridas no mercado Brasileiro
+description: Biblioteca para automação de aplicações inseridas no mercado Brasileiro.
 
+# Author
+author: Gilmar Pupo
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars0.githubusercontent.com/u/126154?s=60&v=4
 #
 # Flags below are optional
 #
+
+# Keywords about the project
+keywords: opensource automation banking brazil
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -83,3 +88,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - layout-page
+
