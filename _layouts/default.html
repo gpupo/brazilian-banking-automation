@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{{ site.name }} – {{ site.description }} by {{ site.author }}</title>
 
     {% include meta.html %}
 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
+    <!-- LOAD FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Bootstrap theme -->
@@ -21,41 +23,80 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+      <div class="o-wrapper">
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+        <div class="sidebar">
+            <header>
+                <div class="container-fluid">
+                    <div class="col-lg-11 col-lg-offset-1 col-sm-12">
+                        <div class="c-site-info">
+                            <button class="btn-toggle-menu pull-left visible-sm visible-xs">
+                                <span role="icon" class="glyphicon glyphicon-menu-hamburger"></span>
+                            </button>
+                            <h1><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+                            <div class="visible-md visible-lg">
+                              <p class="c-site-description">{{ site.description }}</p>
+                              <span> Created by <a href="https://www.gpupo.com">@gpupo</a></span>
+                            </div>
+                        </div>
+                        <div class="visible-md visible-lg">
+                          <nav>
+                            <ul class="c-nav-page"> 
+                              <li>Step</li>
+                              <li>Step</li>
+                            </ul>
+                          </nav>
+                            <div class="o-wrapper">
+                              <a class="btn c-btn--donate" role="button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EK6F2WRKG7GNN&amp;item_name={{ site.github.project_title }}"> Donate <span role="icon" class="glyphicon glyphicon-heart"></span>
+                              </a>
+                            </div>
+              
+                            <div class="o-wrapper">
+                            <a href="https://github.com/gpupo/brazilian-banking-automation/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License"></a>
+                            <a href="http://travis-ci.org/gpupo/brazilian-banking-automation"><img src="https://secure.travis-ci.org/gpupo/brazilian-banking-automation.png?branch=master" alt="Build Status"></a>
+                            <a href="https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master"><img src="https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+                            <a href="https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/?branch=master"><img src="https://scrutinizer-ci.com/g/gpupo/brazilian-banking-automation/badges/coverage.png?b=master" alt="Code Coverage"></a>
+                            <a href="{{ site.github.releases_url }}/latest"><img title="Stable Version" src="https://poser.pugx.org/gpupo/{{ site.github.project_title }}/v/stable"></a>
+                            <a href="https://packagist.org/packages/gpupo/{{ site.github.project_title }}"><img title="Total de downloads" src="https://poser.pugx.org/gpupo/{{ site.github.project_title }}/downloads"></a>
+                            </div>
+              
+                      
+                          <ul class="c-btn-groups">
+                              <li><a class="btn c-btn--download" href="{{ site.github.wiki_url }}" role="button">Wiki</a></li>
+                              <li><a class="btn c-btn--download" href="{{ site.github.releases_url }}" role="button">Releases</a></li>
+                              <li><a class="btn c-btn--download" href="{{ site.github.repository_url }}" role="button fork">Source Code</a></li>
+                              <li><a class="btn c-btn--download" href="{{ site.github.zip_url }}" role="button">Downloads <span role="icon" class="glyphicon glyphicon-save"></span></a></li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <footer class="">
+                <div class="container-fluid">
+                    <div class="col-lg-11 col-lg-offset-1">
+                      {% include svg-icons.html %}
+                     </div>
+                </div>
+            </footer>
+        </div>
+        
+        <main class="main">
+          <div class="container-fluid">
+            <div class="col-lg-10">
+                {{ content }}
+            </div>
           </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
+        </main>
+        
     </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
 
     {% include analytics.html %}
-    
+
     <!-- Jquery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap javascript plugins and resources -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
