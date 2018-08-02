@@ -37,6 +37,10 @@ class Tools
 
         $rules = $this->map[$schema][$field];
 
+        if(false !== strpos($rules['picture'], '9') && !is_numeric($value)){
+            $value = (int) $value;
+        }
+
         $value = $this->applyFormat($rules['picture'], $value);
 
         return $value;
