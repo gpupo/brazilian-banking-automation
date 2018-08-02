@@ -5,11 +5,9 @@ oos:
 php:
   - 7.2
   - nightly
-  - hhvm
 matrix:
   allow_failures:
     - php: nightly
-    - php: hhvm
 before_script:
   - composer self-update
   - composer install --prefer-dist
