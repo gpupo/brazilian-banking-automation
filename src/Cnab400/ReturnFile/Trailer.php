@@ -27,8 +27,8 @@ class Trailer extends AbstractLine
     public function getSchema()
     {
         return [
-          'tipo_de_registro' => 'number',
-          'codigo_de_retorno' => 'number',
+          'tipo_de_registro' => 'string',
+          'codigo_de_retorno' => 'string',
           'codigo_de_servico' => 'string',
           'codigo_do_banco' => 'string',
           'brancos01' => 'string',
@@ -36,15 +36,15 @@ class Trailer extends AbstractLine
           'valor_total' => 'number',
           'aviso_bancario' => 'string',
           'brancos02' => 'string',
-          'qtdede_titulos_dup' => 'number',
+          'qtdede_titulos_dup' => 'string',
           'valor_total_dup' => 'number',
           'aviso_bancario_dup' => 'string',
           'brancos03' => 'string',
-          'qtdede_titulos_dup2' => 'number',
+          'qtdede_titulos_dup2' => 'string',
           'valor_total_dup2' => 'number',
           'aviso_bancario_dup2' => 'string',
-          'controle_do_arquivo' => 'number',
-          'qtde_de_detalhes' => 'number',
+          'controle_do_arquivo' => 'string',
+          'qtde_de_detalhes' => 'string',
           'vlr_total_informado' => 'number',
           'brancos04' => 'string',
         ];

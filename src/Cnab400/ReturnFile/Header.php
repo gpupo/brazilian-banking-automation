@@ -27,24 +27,24 @@ class Header extends AbstractLine
     public function getSchema()
     {
         return [
-          'tipo_de_registro' => 'number',
+          'tipo_de_registro' => 'string',
           'codigo_de_retorno' => 'string',
           'literal_de_retorno' => 'string',
           'retorno_codigo_do_servico' => 'string',
           'literal_de_servico' => 'string',
           'cobranca' => 'string',
-          'zeros01' => 'number',
+          'zeros01' => 'string',
           'conta' => 'string',
           'dac' => 'string',
           'brancos01' => 'string',
           'nome_da_empresa' => 'string',
           'codigo_do_banco' => 'string',
           'nome_do_banco' => 'string',
-          'data_de_geracao' => 'number',
+          'data_de_geracao' => 'string',
           'densidade' => 'string',
           'unidade_de_densid' => 'string',
           'n_seq_arquivo_ret' => 'string',
-          'data_de_credito' => 'number',
+          'data_de_credito' => 'string',
           'brancos02' => 'string',
         ];
     }
