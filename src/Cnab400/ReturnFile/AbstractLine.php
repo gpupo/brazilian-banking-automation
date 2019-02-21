@@ -18,11 +18,10 @@ declare(strict_types=1);
 namespace Gpupo\BrazilianBankingAutomation\Cnab400\ReturnFile;
 
 use Gpupo\BrazilianBankingAutomation\Tools\Tools;
-use Gpupo\Common\Entity\CollectionInterface;
 use Gpupo\CommonSdk\Entity\EntityAbstract;
 use Gpupo\CommonSdk\Entity\EntityInterface;
 
-abstract class AbstractLine extends EntityAbstract implements EntityInterface, CollectionInterface
+abstract class AbstractLine extends EntityAbstract implements EntityInterface
 {
     public function formatted($field)
     {

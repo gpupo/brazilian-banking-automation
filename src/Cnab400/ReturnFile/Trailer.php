@@ -24,7 +24,7 @@ class Trailer extends AbstractLine
     /**
      * @codeCoverageIgnore
      */
-    public function getSchema()
+    public function getSchema(): array
     {
         return [
           'tipo_de_registro' => 'string',
