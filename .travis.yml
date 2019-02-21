@@ -3,11 +3,7 @@ language: php
 oos:
   - linux
 php:
-  - 7.2
-  - nightly
-matrix:
-  allow_failures:
-    - php: nightly
+  - 7.3
 before_script:
   - composer self-update
   - composer install --prefer-dist

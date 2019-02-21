@@ -19,7 +19,8 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^8.0",
+        "phan/phan": "^1.0"
     },
     "config": {
         "preferred-install": "dist"
@@ -27,11 +28,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "gpupo/common": "^4.0|dev-master",
-        "symfony/console": "^4.0",
-        "symfony/var-dumper": "^4.0",
-        "symfony/yaml": "^4.0",
-        "gpupo/common-sdk": "^4.3|dev-master",
+        "php": ">=7.3",
+        "gpupo/common-sdk": "^4.9.2|dev-master",
         "andersondanilo/cnab_php": "^1.3"
     }
 }
