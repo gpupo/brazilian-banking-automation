@@ -28,7 +28,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.3",
+        "php": ">=7.4",
         "gpupo/common-sdk": "^4.9.2|dev-master",
         "andersondanilo/cnab_php": "^1.3"
     }
