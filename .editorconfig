@@ -8,6 +8,10 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
+# tabs 2 spaces for makefiles
+[{Makefike,*.mk}]
+indent_style = tabs
+
 [*.{js,py,yml,yaml,json,css,scss,xml,html,sh}]
 indent_size = 2
 indent_style = space
