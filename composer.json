@@ -19,7 +19,7 @@
         }
     },
     "require-dev": {
-      "gpupo/common-dev": "^5.0"
+      "gpupo/common-dev": "*"
     },
     "config": {
         "preferred-install": "dist"
@@ -30,8 +30,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.4",
-        "gpupo/common-sdk": "^5.0|dev-master",
+        "php": ">=7.4 || ^8.0",
+        "gpupo/common-sdk": "^5.0 || ^6.0",
         "andersondanilo/cnab_php": "^1.3"
     }
 }
