@@ -3,7 +3,7 @@ language: php
 oos:
   - linux
 php:
-  - 7.4
+  - 8.0
 before_script:
   - composer self-update --2
   - composer install --prefer-dist
